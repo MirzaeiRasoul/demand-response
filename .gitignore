@@ -1,0 +1,6 @@
+# Py Cache Files and Folder
+__pycache__/
+*.pyc
+
+# CSV Files
+*.csv

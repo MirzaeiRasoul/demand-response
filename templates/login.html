@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="description" content=""> -->
+    <meta name="author" content="Rasoul Mirzaei Zadeh">
+    <!-- <meta name="keywords" content=""> -->
+    <link rel="icon" href="static/images/favicon.png" type="image/png" sizes="16x16">
+
+    <!-- Page Title -->
+    <title>Login</title>
+
+    <!-- Fontfaces CSS -->
+    <link href="static/css/sahel-font-face.css" rel="stylesheet" media="all">
+    <link href="static/plugins/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="static/plugins/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS -->
+    <link href="static/plugins/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS -->
+    <link href="static/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="rtl">
+    <div class="page-wrapper">
+        <div class="page-content--bge5">
+            <div class="container h-100">
+                <div class="login-wrap h-100">
+                    <div class="login-content">
+                        <div class="login-logo">
+                            <a href="#">
+                                <img src="static/images/zedc.png" alt="CoolAdmin">
+                            </a>
+                        </div>
+                        <div class="login-form">
+                            <form action="/" method="post">
+                                <div class="form-group">
+                                    <label>نام کاربری</label>
+                                    <input class="au-input au-input--full" type="text" name="username" placeholder="نام کاربری خود را وارد کنید." required>
+                                </div>
+                                <div class="form-group">
+                                    <label>کلمه عبور</label>
+                                    <input class="au-input au-input--full" type="password" name="password" placeholder="کلمه عبور خود را وارد کنید." required>
+                                </div>
+                                <div class="login-checkbox">
+                                    <label class="d-flex align-items-center small">
+                                        <input type="checkbox" name="remember">به خاطر سپردن
+                                    </label>
+                                    <label>
+                                        <a class="small" href="forget-pass">بازیابی رمز عبور</a>
+                                    </label>
+                                </div>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">ورود به سامانه</button>
+                                <!-- <div class="social-login-content">
+                                    <div class="social-button">
+                                        <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
+                                        <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
+                                    </div>
+                                </div> -->
+                            </form>
+                            <div class="register-link">
+                                <p>
+                                    <a href="register">ایجاد اکانت جدید</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="d-none" id="login-message">{{error}}</div>
+
+    <!-- jQuery JS -->
+    <script src="static/plugins/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="static/plugins/bootstrap-4.1/popper.min.js"></script>
+    <script src="static/plugins/bootstrap-4.1/bootstrap.min.js"></script>
+
+    <!-- Login JS -->
+    <script src="static/js/login.js"></script>
+
+</body>
+
+</html>
+<!-- End Document -->
