@@ -11,7 +11,7 @@
     <link rel="icon" href="static/images/favicon.png" type="image/png" sizes="16x16">
 
     <!-- Page Title -->
-    <title>صفحه اصلی</title>
+    <title>اطلاعات مصرف کل</title>
 
     <!-- Fontfaces CSS -->
     <link href="static/css/sahel-font-face.css" rel="stylesheet" media="all">
@@ -97,12 +97,9 @@
                 <div class="section__content section__content--p10">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            <form class="form-header" action="" method="POST">
-                                <!-- <input class="au-input au-input--xl" type="text" name="search" placeholder="جستجو ..."/>
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button> -->
-                            </form>
+                            <div class="form-header">
+
+                            </div>
                             <div class="header-button">
                                 <div class="noti-wrap">
                                     <div class="noti__item js-item-menu">
@@ -233,7 +230,7 @@
                                                     <h5 class="name">
                                                         <a href="#">{{ username }}</a>
                                                     </h5>
-                                                    <span class="email">rasoul@gmail.com</span>
+                                                    <span class="email">test@gmail.com</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -272,13 +269,6 @@
                                         <div class="row">
                                             <div class="col-4">
                                                 <div class="form-group">
-                                                    <label for="user-id" class="control-label mb-1">شماره کاربری</label>
-                                                    <!-- <input id="user-id" name="user-id" class="au-input au-input--xl" placeholder=""> -->
-                                                    <select id="user-id" name="user-id" class="au-input au-input--xl"></select>
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="form-group">
                                                     <label for="start-date" class="control-label mb-1">تاریخ شروع دوره</label>
                                                     <input id="start-date" name="start-date" class="au-input au-input--xl datepicker" placeholder="روز/ماه/سال">
                                                 </div>
@@ -289,15 +279,13 @@
                                                     <input id="end-date" name="end-date" class="au-input au-input--xl datepicker" placeholder="روز/ماه/سال">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-8">
-                                        
-                                            </div>
                                             <div class="col-4">
-                                                <button class="au-btn--submit col-12" onclick="loadInformation();">
-                                                    ارسال اطلاعات
-                                                </button>
+                                                <div class="form-group">
+                                                    <label class="control-label mb-1" style="color: transparent;">.</label>
+                                                    <button class="au-btn--submit col-12" onclick="loadInformation();">
+                                                        ارسال اطلاعات
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -307,10 +295,10 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="au-card">
-                                    <div class="au-card-title">اطلاعات جامع کاربر</div>
+                                    <div class="au-card-title">اطلاعات جامع</div>
                                     <div class="au-card-context">
                                         <div class="row">
-                                            <div class="col-sm-6 col-lg-3">
+                                            <div class="col-sm-6 col-lg-4">
                                                 <div class="overview-item overview-item--c1">
                                                     <div class="overview__inner">
                                                         <div class="overview-box clearfix">
@@ -318,14 +306,14 @@
                                                                 <i class="zmdi zmdi-account-box"></i>
                                                             </div>
                                                             <div class="text">
-                                                                <h2 id="user-total-demand">0</h2>
-                                                                <span>میزان مصرف کل در بازه</span>
+                                                                <h2 id="number-of-users">0</h2>
+                                                                <span>تعداد کاربران</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-lg-3">
+                                            <div class="col-sm-6 col-lg-4">
                                                 <div class="overview-item overview-item--c2">
                                                     <div class="overview__inner">
                                                         <div class="overview-box clearfix">
@@ -333,38 +321,117 @@
                                                                 <i class="zmdi zmdi-chart"></i>
                                                             </div>
                                                             <div class="text">
-                                                                <h2 id="user-avg-demand">0</h2>
-                                                                <span>میانگین مصرف</span>
+                                                                <h2 id="total-demand--value">0</h2>
+                                                                <span>میزان مصرف کل</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-lg-3">
+                                            <div class="col-sm-6 col-lg-4">
                                                 <div class="overview-item overview-item--c3">
                                                     <div class="overview__inner">
                                                         <div class="overview-box clearfix">
                                                             <div class="icon">
-                                                                <i class="zmdi zmdi-trending-down"></i>
+                                                                <i class="zmdi zmdi-calendar-note"></i>
                                                             </div>
                                                             <div class="text">
-                                                                <h2 id="user-min-demand">0</h2>
-                                                                <span>کمترین مصرف</span>
+                                                                <h2 id="total-demand--daily-avg">0</h2>
+                                                                <span>میانگین مصرف روزانه</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-lg-3">
-                                                <div class="overview-item overview-item--c4">
+                                        </div>
+                                        <div class="row m-t-15">
+                                            <div class="col-sm-6 col-lg-4">
+                                                <div class="overview-item overview-item--c1">
                                                     <div class="overview__inner">
                                                         <div class="overview-box clearfix">
                                                             <div class="icon">
-                                                                <i class="zmdi zmdi-trending-up"></i>
+                                                                <i class="zmdi zmdi-account-box"></i>
                                                             </div>
                                                             <div class="text">
-                                                                <h2 id="user-max-demand">0</h2>
-                                                                <span>بیشترین مصرف</span>
+                                                                <h2 id="user-with-min-demand">0</h2>
+                                                                <span>کم مصرف ترین کاربر</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-4">
+                                                <div class="overview-item overview-item--c2">
+                                                    <div class="overview__inner">
+                                                        <div class="overview-box clearfix">
+                                                            <div class="icon">
+                                                                <i class="zmdi zmdi-chart"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h2 id="user-with-min-demand--value">0</h2>
+                                                                <span>میزان مصرف کل</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-4">
+                                                <div class="overview-item overview-item--c3">
+                                                    <div class="overview__inner">
+                                                        <div class="overview-box clearfix">
+                                                            <div class="icon">
+                                                                <i class="zmdi zmdi-calendar-note"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h2 id="user-with-min-demand--daily-avg">0</h2>
+                                                                <span>میانگین مصرف روزانه</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-15">
+                                            <div class="col-sm-6 col-lg-4">
+                                                <div class="overview-item overview-item--c1">
+                                                    <div class="overview__inner">
+                                                        <div class="overview-box clearfix">
+                                                            <div class="icon">
+                                                                <i class="zmdi zmdi-account-box"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h2 id="user-with-max-demand">0</h2>
+                                                                <span>پر مصرف ترین کاربر</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-4">
+                                                <div class="overview-item overview-item--c2">
+                                                    <div class="overview__inner">
+                                                        <div class="overview-box clearfix">
+                                                            <div class="icon">
+                                                                <i class="zmdi zmdi-chart"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h2 id="user-with-max-demand--value">0</h2>
+                                                                <span>میزان مصرف کل</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-4">
+                                                <div class="overview-item overview-item--c3">
+                                                    <div class="overview__inner">
+                                                        <div class="overview-box clearfix">
+                                                            <div class="icon">
+                                                                <i class="zmdi zmdi-calendar-note"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h2 id="user-with-max-demand--daily-avg">0</h2>
+                                                                <span>میانگین مصرف روزانه</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -378,17 +445,17 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="au-card">
-                                    <div class="au-card-title">نمودار میزان مصرف</div>
+                                    <div class="au-card-title">نمودار مصرف میانگین</div>
                                     <div class="au-card-context chart-context">
-                                        <div id="demand-chart-filter-container" class="form-group col-lg-4 col-sm-6 d-none">
-                                            <label for="demand-chart-type-select" class="control-label mb-1">انتخاب نوع نمودار</label>
-                                            <select id="demand-chart-type-select" class="au-input au-input--xl">
+                                        <div id="average-demand-chart-filter-container" class="form-group col-lg-4 col-sm-6 d-none">
+                                            <label for="average-demand-chart-type-select" class="control-label mb-1">انتخاب نوع نمودار</label>
+                                            <select id="average-demand-chart-type-select" class="au-input au-input--xl">
                                                 <option value="hourly">ساعتی</option>
                                                 <option value="daily">روزانه</option>
                                             </select>
                                         </div>
-                                        <div id="demand-chart-container">
-                                            <canvas id="demand-chart"></canvas>
+                                        <div id="average-demand-chart-container">
+                                            <canvas id="average-demand-chart"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -421,7 +488,7 @@
     <script src="static/plugins/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="static/plugins/chartjs/Chart.bundle.min.js"></script>
     <script src="static/plugins/d3/d3.min.js"></script>
-
+    
     <script src="static/plugins/persian-date/persian-date-0.1.8.min.js"></script>
     <script src="static/plugins/persian-datepicker/persian-datepicker.js"></script>
 
@@ -429,8 +496,8 @@
     <script src="static/js/common.js"></script>
     <!-- Utils JS -->
     <script src="static/js/utils.js"></script>
-    <!-- Index JS -->
-    <script src="static/js/index.js"></script>
+    <!-- Dashboard JS -->
+    <script src="static/js/dashboard.js"></script>
 
 </body>
 

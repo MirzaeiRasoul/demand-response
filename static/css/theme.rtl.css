@@ -1,0 +1,173 @@
+/* -------------------------------- */
+/* ---------- RTL Styles ---------- */
+/* -------------------------------- */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl label {
+    margin-right: 5px;
+}
+
+.rtl .au-input {
+    text-align: left;
+}
+
+.rtl .au-input::placeholder {  
+    text-align: right; 
+} 
+
+.rtl .navbar-sidebar .navbar__list li a i {
+    margin-left: 7px;
+    margin-right: 0;
+}
+
+.rtl .noti-wrap .noti__item:last-child {
+    margin-left: 20;
+    margin-right: 0;
+}
+
+@media (max-width: 1200px) {
+    .rtl .noti-wrap .noti__item:last-child {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .rtl .noti-wrap .noti__item:last-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.rtl .noti__item {
+    margin-left: 35px;
+    margin-right: 0;
+}
+
+@media (max-width: 1200px) {
+    .rtl .noti__item {
+        margin-left: 25px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .rtl .noti__item {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+}
+
+.rtl .account-item > .content > a:after {
+    margin-right: 5px;
+}
+
+.rtl .account-item > .content {
+    padding-right: 12px;
+}
+
+.rtl .account-dropdown {
+    left: 0;
+    right: auto;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.rtl .account-dropdown:after {
+    left: 25px;
+    right: auto;
+}
+
+.rtl .account-dropdown__item a i,
+.rtl .account-dropdown__footer a i {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.rtl .chart-info {
+    margin: 15px 0;
+}
+
+.rtl .chart-info .chart-info__left {
+    margin: auto 0;
+}
+
+.rtl .chart-note {
+    margin-left: 12px;
+    margin-right: 0;
+}
+
+.rtl .chart-note .dot {
+    margin-left: 7px;
+    margin-right: 0;
+}
+
+.rtl .chart-statis {
+    margin-left: 12px;
+    margin-right: 0;
+}
+
+
+/* ----- 1200px Mode ----- */
+@media (max-width: 1200px) {
+    .rtl .au-input--xl {
+        min-width: auto;
+    }
+}
+
+/* ----- Mobile Mode ----- */
+.rtl .header-mobile .header-mobile__bar {
+    padding: 0;
+}
+
+.rtl .header-mobile .navbar-mobile .navbar-mobile__list li a > i {
+    margin-left: 19px;
+    margin-right: 0;
+}
+
+@media (max-width: 991px) {
+    .rtl .page-container {
+        padding-right: 0;
+    }
+
+    .rtl .header-desktop {
+        height: 75px;
+        right: 0;
+    }
+
+    .rtl .main-content {
+        padding-top: 25px;
+    }
+
+    .rtl .header-wrap {
+        flex-direction: row;
+    }
+    
+    .rtl .header-button {
+        margin-top: 0;
+        width: auto;
+    }
+}
+
+/* ----- Dashboard Page ----- */
+.rtl .overview-item {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.rtl .overview-box .icon {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* ----- Login Page ----- */
+.rtl .login-checkbox label input[type="checkbox"] {
+    margin-right: 0;
+    margin-left: 8px;
+}

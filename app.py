@@ -5,18 +5,9 @@ from flask import Flask, redirect, render_template, request
 from flask import session, escape
 
 app = Flask(__name__)
-# app = Flask(__name__, root_path='')
-# app = Flask(__name__, static_url_path='/static')
 
 # Set the secret key to some random bytes. Keep this really secret!
 app.secret_key = b'\xce\xcf\xd5\x8ez\xa2\xd2I\xab\x9e\xbcOZ\x82\x1a\xc0'
-
-# @app.errorhandler(404)
-# def not_found(error):
-#     # app.logger.debug('A value for debugging')
-#     # app.logger.warning('A warning occurred (%d apples)', 42)
-#     # app.logger.error('An error occurred')
-#     return render_template('404.html')
 
 
 @app.route('/forget-pass')
@@ -38,9 +29,19 @@ def login():
 
 @app.route('/logout')
 def logout():
-    # remove the username from the session if it's there
+    # remove the username from the session
     session.pop('username', None)
     return redirect('login')
+
+
+@app.route('/dashboard')
+def dashboard():
+    if request.method == 'GET':
+        if 'username' in session:
+            username = session['username']
+            return render_template('dashboard.html', username = username)
+        return redirect('login')
+    # return render_template('dashboard.html')
 
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -64,4 +65,3 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    # app.run(host='0.0.0.0', port=8090, debug=True)
