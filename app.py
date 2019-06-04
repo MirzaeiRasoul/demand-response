@@ -41,7 +41,6 @@ def dashboard():
             username = session['username']
             return render_template('dashboard.html', username = username)
         return redirect('login')
-    # return render_template('dashboard.html')
 
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -54,7 +53,7 @@ def index():
     elif request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == 'rasoul' and password == '1234':
+        if username == 'MASlab_User' and password == '2691*1396':
             session['username'] = username
             # remember = request.form['remember']
             # print (remember)

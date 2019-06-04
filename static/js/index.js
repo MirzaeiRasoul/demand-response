@@ -5,6 +5,10 @@
   try {
     console.log("Welcome to Home Page...");
 
+    var userId = "",
+      startDate = "",
+      endDate = "";
+
     var userNames = {
       "TFC0040775001526": "اصغر حدیدیان",
       "TFC0040775001467": "بهجت ابریشمی",
@@ -25,7 +29,7 @@
 
 
 function loadInformation() {
-  var userId = $("#user-id").val(),
+  userId = $("#user-id").val(),
     startDate = $("#start-date").val(),
     endDate = $("#end-date").val();
   if (!userId || !startDate || !endDate) {
@@ -48,10 +52,6 @@ function prepareData(datas) {
   //   "Reactive energy import _+R_ _QI+QII__1-0_3_8_0_255_": "1599130",
   //   "Reactive energy export _-R_ _QIII+QIV__1_0_4_8_0_255_": "0"
   // }
-
-  var userId = $("#user-id").val(),
-    startDate = $("#start-date").val(),
-    endDate = $("#end-date").val();
 
   // Check Filter Validity
   var userIdValidation = datas.find(data => data["MeterName"] == userId);
@@ -111,6 +111,9 @@ function prepareData(datas) {
       $("#user-max-demand").html(numberFormat(maxDemand) + " (" + maxDemandDate + ")");
 
       d3.csv('static/SampleHour.csv').then(drawDemandChart);
+
+      // Reset Chart Type Filter Value
+      $('#demand-chart-type-select').val('hourly').trigger('change.select2');
       // Show Chart Filter
       $("#demand-chart-filter-container").removeClass("d-none");
       $('#demand-chart-type-select').select2({
@@ -137,10 +140,6 @@ function drawDemandChart(datas) {
   var ctx = document.getElementById('demand-chart').getContext('2d');
   Chart.defaults.global.defaultFontFamily = 'Roboto';
   Chart.defaults.global.defaultFontColor = '#333';
-
-  var userId = $("#user-id").val(),
-    startDate = $("#start-date").val(),
-    endDate = $("#end-date").val();
 
   var clocks = [],
     demands = [];

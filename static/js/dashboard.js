@@ -4,6 +4,10 @@
   // Load Page
   try {
     console.log("Welcome to Dashboard Page...");
+
+    var startDate = "",
+      endDate = "";
+
   } catch (error) {
     console.log(error);
   }
@@ -12,7 +16,7 @@
 
 function loadInformation() {
   try {
-    var startDate = $("#start-date").val(),
+    startDate = $("#start-date").val(),
       endDate = $("#end-date").val();
     if (!startDate || !endDate) {
       alert("لطفا همه اطلاعات لازم را وارد کنید.");
@@ -42,9 +46,6 @@ function prepareData(datas) {
   //   "Reactive energy import _+R_ _QI+QII__1-0_3_8_0_255_": "1599130",
   //   "Reactive energy export _-R_ _QIII+QIV__1_0_4_8_0_255_": "0"
   // }
-
-  var startDate = $("#start-date").val(),
-    endDate = $("#end-date").val();
 
   var meterNames = [],
     clocks = [],
@@ -114,6 +115,9 @@ function prepareData(datas) {
     $("#user-with-max-demand--daily-avg").html(numberFormat(userWithMaxDemandDailyAvg));
 
     d3.csv('static/SampleHourAverage.csv').then(drawAverageDemandChart);
+
+    // Reset Chart Type Filter Value
+    $('#average-demand-chart-type-select').val('hourly').trigger('change.select2');
     // Show Chart Filter
     $("#average-demand-chart-filter-container").removeClass("d-none");
     $('#average-demand-chart-type-select').select2({
@@ -139,9 +143,6 @@ function drawAverageDemandChart(datas) {
   var ctx = document.getElementById('average-demand-chart').getContext('2d');
   Chart.defaults.global.defaultFontFamily = 'Roboto';
   Chart.defaults.global.defaultFontColor = '#333';
-  
-  var startDate = $("#start-date").val(),
-    endDate = $("#end-date").val();
 
   var clocks = [],
     demands = [];
