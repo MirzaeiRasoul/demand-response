@@ -7,5 +7,5 @@ All resources ...
 <p align="center">
  <b>Copyright © 2019</b>
  <br>
- <a href="https://mirzaeirasoul.github.io">Rasoul Mirzaei Zadeh</a>
+ <a href="https://mirzaeirasoul.github.io">Rasoul Mirzaei Zadeh</a>, Hossein A. Rahmani, Meysam Azad-Manjiri
 </p>
