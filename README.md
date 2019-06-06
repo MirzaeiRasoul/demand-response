@@ -1,8 +1,7 @@
 # Demand Response Project
 This repo is created for hosting Demand-Response project.
 
-<img src="screenshot.png" width="100%" height="500px"/>
-
+<img src="screenshot.png" width="100%"/>
 
 ## License
 All resources created by Demand-Response project team:
