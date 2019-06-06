@@ -1,11 +1,15 @@
 # Demand Response Project
-This repo ...
+This repo is created for hosting Demand-Response project.
+
+<img src="screenshot.png" width="100%" height="500px"/>
+
 
 ## License
-All resources ...
+All resources created by Demand-Response project team:
+- [Rasoul Mirzaei Zadeh](https://github.com/MirzaeiRasoul)
+- [Hossein A. Rahmani](https://github.com/rahmanidashti)
+- [Meysam Azad](https://github.com/Meisam-Azad)
 
 <p align="center">
  <b>Copyright © 2019</b>
- <br>
- <a href="https://mirzaeirasoul.github.io">Rasoul Mirzaei Zadeh</a>, Hossein A. Rahmani, Meysam Azad-Manjiri
 </p>
